@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservas — Agente IA para Negocios Locales</title>
+  <meta name="description" content="Reservas es una plataforma SaaS que automatiza tus citas y reservaciones por WhatsApp e Instagram con un agente de inteligencia artificial disponible 24/7." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Reservas — Agente IA para Negocios Locales" />
+  <meta property="og:description" content="Reservas es el asistente inteligente que atiende a tus clientes 24/7 por WhatsApp e Instagram, agenda citas automáticamente y te muestra todo desde un panel web." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── STATS BAR ───────────────────────────────────────────── */
+    .stats-bar {
+      background: #f8f9ff;
+      border-top: 1px solid #e8eaf6;
+      border-bottom: 1px solid #e8eaf6;
+      padding: 2rem 0;
+    }
+    .stats-bar .container {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #4f46e5;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+
+    /* ── TESTIMONIALS ────────────────────────────────────────── */
+    .testimonials {
+      padding: 5rem 0;
+      background: #fff;
+    }
+    .testimonials .section-label {
+      text-align: center;
+    }
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .testimonials .section-sub {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 3rem;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: #f8f9ff;
+      border: 1px solid #e8eaf6;
+      border-radius: 1rem;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .testimonial-quote {
+      font-size: 0.9375rem;
+      color: #374151;
+      line-height: 1.65;
+      font-style: italic;
+    }
+    .testimonial-quote::before {
+      content: "\201C";
+      font-size: 1.25rem;
+      color: #4f46e5;
+      font-style: normal;
+      margin-right: 2px;
+    }
+    .testimonial-quote::after {
+      content: "\201D";
+      font-size: 1.25rem;
+      color: #4f46e5;
+      font-style: normal;
+      margin-left: 2px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .author-avatar {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .author-avatar.av-purple { background: #7c3aed; }
+    .author-avatar.av-teal   { background: #0d9488; }
+    .author-avatar.av-rose   { background: #e11d48; }
+    .author-info .author-name {
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: #111827;
+    }
+    .author-info .author-biz {
+      font-size: 0.8125rem;
+      color: #6b7280;
+    }
+
+    /* ── FAQ ─────────────────────────────────────────────────── */
+    .faq {
+      padding: 5rem 0;
+      background: #f8f9ff;
+    }
+    .faq .section-label {
+      text-align: center;
+    }
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .faq .section-sub {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 3rem;
+    }
+    .faq-grid {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e8eaf6;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      padding: 1.25rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: #111827;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.25rem;
+      color: #4f46e5;
+      font-weight: 400;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-item[open] summary {
+      color: #4f46e5;
+    }
+    .faq-answer {
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+      line-height: 1.65;
+      border-top: 1px solid #e8eaf6;
+      padding-top: 1rem;
+    }
+
+    /* ── CONTACT "Operado por" ───────────────────────────────── */
+    .contact-operator {
+      margin-top: 1.25rem;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+    .contact-operator strong {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">Reservas<span class="logo-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="#features">Funciones</a>
+        <a href="#verticals">Negocios</a>
+        <a href="#pricing">Precios</a>
+        <a href="#contact" class="btn btn-outline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="badge">Agente IA · WhatsApp + Instagram</div>
+      <h1>Llena tu agenda sin<br/>levantar el teléfono</h1>
+      <p class="hero-sub">
+        Reservas es el asistente inteligente que atiende a tus clientes 24/7 por WhatsApp e Instagram, agenda citas automáticamente y te muestra todo desde un panel web.
+      </p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-primary">Prueba 30 días gratis</a>
+        <a href="#features" class="btn btn-ghost">Ver cómo funciona</a>
+      </div>
+      <div class="hero-tags">
+        <span>Salones de fiestas</span>
+        <span>Barberías</span>
+        <span>Spas</span>
+        <span>Psicólogos</span>
+        <span>Nutriólogos</span>
+        <span>Doctores</span>
+      </div>
+    </div>
+    <div class="hero-glow"></div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-number">300+</div>
+        <div class="stat-label">negocios activos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">disponibilidad del agente</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">30 días</div>
+        <div class="stat-label">de prueba gratis</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="steps" id="features">
+    <div class="container">
+      <div class="section-label">¿Cómo funciona?</div>
+      <h2>Tu negocio siempre disponible</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon">💬</div>
+          <h3>Cliente escribe por WhatsApp o Instagram</h3>
+          <p>Tu agente responde al instante, sin esperas y con el tono de tu negocio.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-icon">🤖</div>
+          <h3>IA confirma la cita</h3>
+          <p>Verifica disponibilidad, propone horarios y registra la reservación automáticamente.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-icon">📊</div>
+          <h3>Tú controlas desde el panel</h3>
+          <p>Ve todas tus reservaciones, clientes y estadísticas en tiempo real desde cualquier dispositivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Respuestas al instante</h3>
+          <p>Tu agente responde en segundos, sin importar la hora — incluyendo fines de semana y días festivos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Agenda inteligente</h3>
+          <p>Gestión de disponibilidad en tiempo real. Nunca más citas duplicadas ni confirmaciones manuales.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>CRM de clientes</h3>
+          <p>Historial completo de cada cliente: reservaciones pasadas, preferencias y datos de contacto.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Recordatorios automáticos</h3>
+          <p>Reduce cancelaciones con recordatorios 24 horas antes enviados directo por WhatsApp.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>WhatsApp + Instagram</h3>
+          <p>Un solo agente cubre ambos canales. Tus clientes escriben donde prefieren.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Reportes y métricas</h3>
+          <p>Visualiza ocupación, ingresos estimados y tendencias para tomar mejores decisiones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERTICALS -->
+  <section class="verticals" id="verticals">
+    <div class="container">
+      <div class="section-label">Para tu tipo de negocio</div>
+      <h2>Hecho para negocios locales</h2>
+      <p class="section-sub">Sin importar tu giro, Reservas se adapta a tus horarios, servicios y forma de trabajar.</p>
+      <div class="verticals-grid">
+        <div class="vertical-card">
+          <span class="v-icon">🎉</span>
+          <h4>Salones de fiestas</h4>
+          <p>Gestiona fechas de eventos, paquetes y anticipos.</p>
+        </div>
+        <div class="vertical-card">
+          <span class="v-icon">✂️</span>
+          <h4>Barberías</h4>
+          <p>Citas por barbero, servicios y tiempos de corte.</p>
+        </div>
+        <div class="vertical-card">
+          <span class="v-icon">💆</span>
+          <h4>Spas &amp; Estética</h4>
+          <p>Reservaciones por terapeuta y tipo de tratamiento.</p>
+        </div>
+        <div class="vertical-card">
+          <span class="v-icon">🩺</span>
+          <h4>Doctores</h4>
+          <p>Agenda médica con recordatorio de cita incluido.</p>
+        </div>
+        <div class="vertical-card">
+          <span class="v-icon">🧠</span>
+          <h4>Psicólogos</h4>
+          <p>Confidencialidad y flexibilidad en consultas presenciales o en línea.</p>
+        </div>
+        <div class="vertical-card">
+          <span class="v-icon">🥗</span>
+          <h4>Nutriólogos</h4>
+          <p>Seguimiento de pacientes y frecuencia de consultas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-label">Testimonios</div>
+      <h2>Lo que dicen nuestros clientes</h2>
+      <p class="section-sub">Negocios reales que ya automatizaron su agenda con Reservas.</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Antes perdía fechas por andar respondiendo mensajes a las 11 de la noche. Con Reservas mi salón de fiestas ya no depende de mí para agendar — el agente lo hace solo y yo descanso los domingos.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar av-purple">LV</div>
+            <div class="author-info">
+              <div class="author-name">Lorena Vázquez Mendoza</div>
+              <div class="author-biz">Salon de Fiestas Ilusiones, Guadalajara</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Mis clientes me escriben por WhatsApp a cualquier hora y Reservas les responde al instante con los horarios disponibles. Desde que lo uso lleno la semana sin hacer una sola llamada. Valió cada peso.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar av-teal">EM</div>
+            <div class="author-info">
+              <div class="author-name">Eduardo Morales Ríos</div>
+              <div class="author-biz">Barbería EM Style, Monterrey</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Mis pacientes valoran mucho la discreción. Reservas les permite agendar consulta a cualquier hora sin hablar con nadie, y a mí me llega la confirmación directo al panel. Totalmente recomendado.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar av-rose">CA</div>
+            <div class="author-info">
+              <div class="author-name">Claudia Arreola Fuentes</div>
+              <div class="author-biz">Psicóloga clínica, Ciudad de México</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-label">Planes</div>
+      <h2>Precio fijo, sin sorpresas</h2>
+      <p class="section-sub">30 días de prueba gratis. Sin tarjeta de crédito.</p>
+      <div class="pricing-grid">
+
+        <div class="plan-card">
+          <div class="plan-name">Esencial</div>
+          <div class="plan-price">$399 <span>/mes</span></div>
+          <ul class="plan-features">
+            <li>✓ Agente IA en WhatsApp</li>
+            <li>✓ Panel CRM básico</li>
+            <li>✓ Hasta 300 reservaciones/mes</li>
+            <li>✓ Soporte por correo</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-dark">Empezar gratis</a>
+        </div>
+
+        <div class="plan-card plan-featured">
+          <div class="plan-badge">Más popular</div>
+          <div class="plan-name">Profesional</div>
+          <div class="plan-price">$599 <span>/mes</span></div>
+          <ul class="plan-features">
+            <li>✓ WhatsApp + Instagram DM</li>
+            <li>✓ CRM completo + historial</li>
+            <li>✓ Reservaciones ilimitadas</li>
+            <li>✓ Recordatorios automáticos</li>
+            <li>✓ Reportes y métricas</li>
+            <li>✓ Soporte prioritario</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Empezar gratis</a>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price">A consultar</div>
+          <ul class="plan-features">
+            <li>✓ Todo lo de Profesional</li>
+            <li>✓ Multi-sucursal</li>
+            <li>✓ Integración personalizada</li>
+            <li>✓ Manager de cuenta dedicado</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-dark">Contactar</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-label">Preguntas frecuentes</div>
+      <h2>Todo lo que necesitas saber</h2>
+      <p class="section-sub">¿Tienes dudas? Aquí respondemos las más comunes.</p>
+      <div class="faq-grid">
+
+        <details class="faq-item">
+          <summary>¿Necesito saber programar para usar Reservas?</summary>
+          <div class="faq-answer">
+            No. Reservas está diseñado para dueños de negocio, no para programadores. El proceso de configuración es guiado paso a paso: tú defines tus horarios, servicios y el tono de tu agente desde un panel web sencillo. Sin código, sin configuraciones técnicas.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿En cuánto tiempo puedo tener mi agente activo?</summary>
+          <div class="faq-answer">
+            La mayoría de nuestros clientes tienen su agente funcionando en menos de 24 horas. Una vez que completas el formulario de contacto, nuestro equipo te acompaña en la configuración inicial y conecta tu WhatsApp o Instagram ese mismo día.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué pasa si mis clientes escriben fuera del horario de atención?</summary>
+          <div class="faq-answer">
+            El agente responde las 24 horas, los 7 días de la semana, incluso si tú no estás disponible. Puede informar sobre tus servicios, mostrar disponibilidad futura y confirmar citas para cuando retomes operaciones. Tus clientes nunca quedan sin respuesta.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Puedo cancelar en cualquier momento?</summary>
+          <div class="faq-answer">
+            Sí, sin penalizaciones ni letras pequeñas. Puedes cancelar tu suscripción cuando quieras desde el panel o escribiéndonos directamente. No hay contratos anuales forzosos ni cargos de cancelación.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <h2>¿Listo para automatizar tu agenda?</h2>
+      <p>Escríbenos y te ayudamos a configurar tu agente en menos de 24 horas.</p>
+      <a href="mailto:hola@reservas.app" class="btn btn-primary btn-lg">Solicitar demo</a>
+      <p class="contact-operator">Operado por <strong>Roberto Castillo Terrazas</strong></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">Reservas<span class="logo-dot">.</span></a>
+        <p>Agente IA para negocios locales en México y LATAM.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#features">Funciones</a>
+        <a href="#verticals">Negocios</a>
+        <a href="#pricing">Precios</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </div>
+    <div class="container footer-legal">
+      <p>© 2026 Reservas. Operado por <strong>Roberto Castillo Terrazas</strong>. Todos los derechos reservados.</p>
+      <p class="footer-address">México · contacto@reservas.app</p>
+    </div>
+  </footer>
+
+</body>
+</html>
