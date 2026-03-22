@@ -191,6 +191,103 @@
       padding-top: 1rem;
     }
 
+    /* ── META INTEGRATION ───────────────────────────────────── */
+    .meta-section {
+      padding: 5rem 0;
+      background: #fff;
+    }
+    .meta-section .section-label,
+    .meta-section h2,
+    .meta-section .section-sub {
+      text-align: center;
+    }
+    .meta-section .section-sub {
+      color: #6b7280;
+      margin-bottom: 3rem;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .meta-card {
+      background: #f8f9ff;
+      border: 1px solid #e8eaf6;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+    .meta-card-full {
+      grid-column: 1 / -1;
+    }
+    .meta-logo {
+      margin-bottom: 1rem;
+    }
+    .meta-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 0.75rem;
+    }
+    .meta-card p {
+      font-size: 0.9375rem;
+      color: #374151;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .meta-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .meta-list li {
+      font-size: 0.875rem;
+      color: #6b7280;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .meta-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #7c3aed;
+    }
+    .meta-data-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 1rem 0;
+    }
+    .meta-data-item {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+    .meta-check {
+      color: #7c3aed;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .meta-disclaimer {
+      font-size: 0.875rem !important;
+      color: #6b7280 !important;
+      background: #f0ebff;
+      border-left: 3px solid #7c3aed;
+      padding: 0.75rem 1rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      margin-top: 0.5rem !important;
+    }
+    .meta-disclaimer a { color: #7c3aed; }
+    @media (max-width: 640px) {
+      .meta-grid { grid-template-columns: 1fr; }
+      .meta-card-full { grid-column: 1; }
+      .meta-data-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── CONTACT "Operado por" ───────────────────────────────── */
     .contact-operator {
       margin-top: 1.25rem;
@@ -210,6 +307,7 @@
       <a href="#" class="logo">Reservas<span class="logo-dot">.</span></a>
       <nav class="nav-links">
         <a href="#features">Funciones</a>
+        <a href="#meta-integration">Integración Meta</a>
         <a href="#verticals">Negocios</a>
         <a href="#pricing">Precios</a>
         <a href="#contact" class="btn btn-outline">Contacto</a>
@@ -320,6 +418,68 @@
           <h3>Reportes y métricas</h3>
           <p>Visualiza ocupación, ingresos estimados y tendencias para tomar mejores decisiones.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- META INTEGRATION -->
+  <section class="meta-section" id="meta-integration">
+    <div class="container">
+      <div class="section-label">Integración oficial con Meta</div>
+      <h2>Construido sobre la infraestructura de Meta</h2>
+      <p class="section-sub">Reservas es un proveedor de tecnología (Tech Provider) que utiliza las APIs oficiales de Meta para conectar negocios con sus clientes.</p>
+      <div class="meta-grid">
+
+        <div class="meta-card">
+          <div class="meta-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="#1877F2"/></svg>
+          </div>
+          <h3>WhatsApp Business API</h3>
+          <p>Reservas se integra con la <strong>WhatsApp Business Platform (Cloud API)</strong> de Meta para enviar y recibir mensajes en nombre de los negocios suscritos. Los clientes finales reciben confirmaciones de cita, recordatorios y respuestas del agente IA directamente en WhatsApp.</p>
+          <ul class="meta-list">
+            <li>Mensajes de plantilla para confirmaciones y recordatorios</li>
+            <li>Sesiones de conversación para atención 24/7</li>
+            <li>Números de teléfono verificados por Meta</li>
+          </ul>
+        </div>
+
+        <div class="meta-card">
+          <div class="meta-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><radialGradient id="ig" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient><rect width="24" height="24" rx="6" fill="url(#ig)"/><path d="M12 7a5 5 0 100 10A5 5 0 0012 7zm0 8a3 3 0 110-6 3 3 0 010 6zm5.2-8.8a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" fill="white"/></svg>
+          </div>
+          <h3>Instagram Messaging API</h3>
+          <p>A través de la <strong>Instagram Messaging API</strong> (parte de Meta Business Messaging), Reservas permite a los negocios atender solicitudes de cita que llegan por Instagram Direct. El agente responde automáticamente y registra la reservación en el CRM.</p>
+          <ul class="meta-list">
+            <li>Respuestas automáticas a mensajes directos de Instagram</li>
+            <li>Handoff a agente humano cuando se requiere</li>
+            <li>Integración con el inbox del negocio</li>
+          </ul>
+        </div>
+
+        <div class="meta-card meta-card-full">
+          <h3>Uso de datos de Meta</h3>
+          <p>Reservas utiliza los datos recibidos a través de las APIs de Meta <strong>exclusivamente para prestar el servicio de gestión de reservaciones</strong> a los negocios suscritos. Los datos de conversación se usan para:</p>
+          <div class="meta-data-grid">
+            <div class="meta-data-item">
+              <span class="meta-check">✓</span>
+              <span>Confirmar y registrar reservaciones solicitadas por los clientes del negocio</span>
+            </div>
+            <div class="meta-data-item">
+              <span class="meta-check">✓</span>
+              <span>Enviar recordatorios de cita 24 horas antes</span>
+            </div>
+            <div class="meta-data-item">
+              <span class="meta-check">✓</span>
+              <span>Mostrar historial de conversaciones en el panel CRM del negocio</span>
+            </div>
+            <div class="meta-data-item">
+              <span class="meta-check">✓</span>
+              <span>Mejorar la calidad de respuesta del agente IA dentro del servicio</span>
+            </div>
+          </div>
+          <p class="meta-disclaimer">Los datos de Meta <strong>no se usan para publicidad, perfilado externo ni se comparten con terceros</strong> fuera de los subprocesadores necesarios para operar el servicio (Supabase, Google Cloud). Consulta nuestro <a href="aviso-de-privacidad.html">Aviso de Privacidad</a> para más detalles.</p>
+        </div>
+
       </div>
     </div>
   </section>
