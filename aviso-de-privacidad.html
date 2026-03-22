@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviso de Privacidad — Reservas</title>
+  <meta name="description" content="Aviso de Privacidad de Reservas. Conoce cómo tratamos tus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)." />
+  <meta name="robots" content="index, follow" />
+  <meta name="facebook-domain-verification" content="rzlopekghjxn8ft2vy9jq1yc44ide9" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Custom Properties ──────────────────────────────────── */
+    :root {
+      --color-bg:            #0a0a0f;
+      --color-bg-soft:       #0f0f17;
+      --color-bg-card:       #13131e;
+      --color-border:        rgba(255, 255, 255, 0.07);
+      --color-border-strong: rgba(255, 255, 255, 0.13);
+      --color-purple:        #7c3aed;
+      --color-purple-light:  #8b5cf6;
+      --color-purple-bright: #a78bfa;
+      --color-purple-subtle: rgba(139, 92, 246, 0.12);
+      --color-text:          #f4f4f8;
+      --color-text-muted:    #9090a8;
+      --color-text-faint:    #5a5a72;
+      --grad-text:           linear-gradient(135deg, #ffffff 0%, #c4b5fd 50%, #8b5cf6 100%);
+      --font-base:           'Inter', system-ui, -apple-system, sans-serif;
+      --container-max:       860px;
+      --container-pad:       clamp(20px, 5vw, 48px);
+    }
+
+    /* ── Reset & Base ───────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-base);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: var(--color-purple-bright);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    a:hover {
+      color: #c4b5fd;
+      text-decoration: underline;
+    }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+    }
+
+    /* ── Header / Nav ───────────────────────────────────────── */
+    .site-header {
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.25rem 0;
+      background: rgba(10, 10, 15, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-mark svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    .logo-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+    }
+
+    .back-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    .back-link:hover {
+      color: var(--color-purple-bright);
+      text-decoration: none;
+    }
+
+    .back-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ── Hero / Page Title ──────────────────────────────────── */
+    .page-hero {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .page-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-purple-bright);
+      background: var(--color-purple-subtle);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-radius: 999px;
+      padding: 0.3rem 0.875rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .page-title {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.875rem;
+    }
+
+    .page-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-faint);
+    }
+
+    /* ── Table of Contents ──────────────────────────────────── */
+    .toc {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border-strong);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .toc-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.375rem 2rem;
+    }
+
+    .toc li {
+      counter-increment: toc-counter;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .toc li::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--color-purple);
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .toc a {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+
+    .toc a:hover {
+      color: var(--color-purple-bright);
+    }
+
+    /* ── Main Content ───────────────────────────────────────── */
+    .content {
+      padding: 2rem 0 5rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 90px;
+    }
+
+    .section-number {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-purple);
+      margin-bottom: 0.5rem;
+    }
+
+    .section h2 {
+      font-size: 1.375rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .section p {
+      color: var(--color-text-muted);
+      margin-bottom: 0.875rem;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    /* ── Data Tables ────────────────────────────────────────── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1.25rem 0;
+    }
+
+    .data-table th {
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-faint);
+      background: var(--color-bg-card);
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--color-border);
+    }
+
+    .data-table td {
+      padding: 0.75rem 1rem;
+      color: var(--color-text-muted);
+      border: 1px solid var(--color-border);
+      vertical-align: top;
+    }
+
+    .data-table tr:hover td {
+      background: rgba(124, 58, 237, 0.04);
+    }
+
+    /* ── Info Cards ─────────────────────────────────────────── */
+    .info-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border-strong);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .info-card.highlight {
+      border-color: rgba(124, 58, 237, 0.35);
+      background: rgba(124, 58, 237, 0.06);
+    }
+
+    .info-card .card-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-purple-bright);
+      margin-bottom: 0.625rem;
+    }
+
+    .info-card p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Lists ──────────────────────────────────────────────── */
+    .content ul,
+    .content ol {
+      padding-left: 1.5rem;
+      margin: 0.875rem 0;
+      color: var(--color-text-muted);
+    }
+
+    .content li {
+      margin-bottom: 0.4rem;
+    }
+
+    .content li strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    /* ── ARCO Rights Grid ───────────────────────────────────── */
+    .arco-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .arco-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border-strong);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .arco-letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .arco-card h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 0.375rem;
+    }
+
+    .arco-card p {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    .site-footer {
+      border-top: 1px solid var(--color-border);
+      padding: 2rem 0;
+      background: #0d0d15;
+    }
+
+    .site-footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--color-text-faint);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--color-text-faint);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-purple-bright);
+    }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .toc ol {
+        grid-template-columns: 1fr;
+      }
+
+      .arco-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .data-table {
+        font-size: 0.8rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        padding: 0.6rem 0.75rem;
+      }
+
+      .site-footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .arco-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ───────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Reservas — Inicio">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm1 11H9V9h2v4zm0-6H9V5h2v2z"/>
+          </svg>
+        </div>
+        <span class="logo-name">Reservas</span>
+      </a>
+      <a href="index.html" class="back-link" aria-label="Volver al inicio">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Volver al inicio
+      </a>
+    </div>
+  </header>
+
+  <!-- ── Page Hero ─────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-label">Legal</div>
+      <h1 class="page-title">Aviso de Privacidad</h1>
+      <p class="page-meta">Última actualización: 21 de marzo de 2026</p>
+    </div>
+  </section>
+
+  <!-- ── Main Content ──────────────────────────────────────── -->
+  <main class="content">
+    <div class="container">
+
+      <!-- Table of Contents -->
+      <nav class="toc" aria-label="Índice de contenido">
+        <p class="toc-title">Contenido</p>
+        <ol>
+          <li><a href="#responsable">Responsable del tratamiento</a></li>
+          <li><a href="#datos">Datos personales que recabamos</a></li>
+          <li><a href="#finalidades">Finalidades del tratamiento</a></li>
+          <li><a href="#meta-api">Uso de la API de Meta</a></li>
+          <li><a href="#transferencias">Transferencias de datos</a></li>
+          <li><a href="#arco">Derechos ARCO</a></li>
+          <li><a href="#cookies">Uso de cookies</a></li>
+          <li><a href="#cambios">Cambios al aviso</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ol>
+      </nav>
+
+      <!-- Intro -->
+      <div class="section">
+        <p>El presente Aviso de Privacidad se emite en cumplimiento de la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong>, su Reglamento y los Lineamientos del Aviso de Privacidad emitidos por el Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI).</p>
+        <p>Al utilizar la plataforma <strong>Reservas</strong>, sus servicios o canales de comunicación asociados, usted acepta los términos del presente aviso.</p>
+      </div>
+
+      <!-- 1. Responsable -->
+      <section class="section" id="responsable">
+        <p class="section-number">01</p>
+        <h2>Responsable del tratamiento de datos personales</h2>
+        <p>El responsable del tratamiento de sus datos personales es:</p>
+        <div class="info-card highlight">
+          <p class="card-label">Datos del responsable</p>
+          <p><strong>Nombre:</strong> Roberto Castillo Terrazas</p>
+          <p><strong>Producto:</strong> Reservas — plataforma SaaS de automatización de reservaciones</p>
+          <p><strong>Correo electrónico:</strong> <a href="mailto:contacto@reservas.app">contacto@reservas.app</a></p>
+          <p><strong>País:</strong> México</p>
+        </div>
+        <p>Para cualquier asunto relacionado con el tratamiento de sus datos personales, puede comunicarse directamente a través del correo electrónico indicado.</p>
+      </section>
+
+      <!-- 2. Datos personales -->
+      <section class="section" id="datos">
+        <p class="section-number">02</p>
+        <h2>Datos personales que recabamos</h2>
+        <p>Reservas puede recabar y tratar las siguientes categorías de datos personales de los usuarios finales que interactúan con los negocios que usan nuestra plataforma:</p>
+
+        <table class="data-table" aria-label="Categorías de datos personales">
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Datos específicos</th>
+              <th>Origen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Identificación</strong></td>
+              <td>Nombre completo o nombre de usuario</td>
+              <td>WhatsApp / Instagram DM</td>
+            </tr>
+            <tr>
+              <td><strong>Contacto</strong></td>
+              <td>Número de teléfono, correo electrónico (cuando se proporciona)</td>
+              <td>WhatsApp / Instagram DM / formularios</td>
+            </tr>
+            <tr>
+              <td><strong>Historial de reservaciones</strong></td>
+              <td>Fechas, horarios, servicios solicitados, estatus de la cita</td>
+              <td>Sistema de reservaciones</td>
+            </tr>
+            <tr>
+              <td><strong>Comunicaciones</strong></td>
+              <td>Mensajes intercambiados en la conversación de WhatsApp o Instagram DM</td>
+              <td>Meta Cloud API</td>
+            </tr>
+            <tr>
+              <td><strong>Preferencias</strong></td>
+              <td>Preferencias de servicio, notas del negocio sobre el cliente</td>
+              <td>Sistema de reservaciones</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>No recabamos datos personales sensibles (como datos de salud, financieros, biométricos o de origen racial) de manera sistemática. En casos donde negocios del sector salud (médicos, psicólogos, nutriólogos) utilicen Reservas, puede existir manejo incidental de información relativa a consultas médicas; en dicho caso, el negocio es responsable directo de obtener el consentimiento informado adicional de sus pacientes conforme a la normativa aplicable.</p>
+      </section>
+
+      <!-- 3. Finalidades -->
+      <section class="section" id="finalidades">
+        <p class="section-number">03</p>
+        <h2>Finalidades del tratamiento</h2>
+        <p>Sus datos personales son tratados para las siguientes finalidades:</p>
+
+        <p><strong>Finalidades primarias</strong> (necesarias para la prestación del servicio):</p>
+        <ul>
+          <li>Agendar, modificar o cancelar citas y reservaciones a través de WhatsApp e Instagram DM.</li>
+          <li>Enviar confirmaciones automáticas de reservación al usuario final.</li>
+          <li>Enviar recordatorios de citas próximas para reducir ausencias.</li>
+          <li>Permitir al negocio visualizar y gestionar su agenda desde el panel de administración de Reservas.</li>
+          <li>Atender solicitudes, aclaraciones o quejas relacionadas con el servicio de reservaciones.</li>
+        </ul>
+
+        <p><strong>Finalidades secundarias</strong> (mejora del servicio; puede oponerse a ellas sin afectar el servicio principal):</p>
+        <ul>
+          <li>Análisis de patrones de uso para mejorar la precisión del agente de inteligencia artificial.</li>
+          <li>Generación de estadísticas agregadas y anónimas sobre el rendimiento de la plataforma.</li>
+          <li>Comunicación de actualizaciones o nuevas funcionalidades del servicio al negocio suscriptor.</li>
+        </ul>
+
+        <p>Si no desea que sus datos sean tratados para las finalidades secundarias, puede manifestar su negativa escribiendo a <a href="mailto:contacto@reservas.app">contacto@reservas.app</a>.</p>
+      </section>
+
+      <!-- 4. Meta API -->
+      <section class="section" id="meta-api">
+        <p class="section-number">04</p>
+        <h2>Uso de la API de Meta (WhatsApp e Instagram)</h2>
+        <p>Reservas utiliza la <strong>Meta Cloud API</strong> para habilitar conversaciones automatizadas con usuarios finales a través de <strong>WhatsApp Business</strong> e <strong>Instagram Direct Messages (DM)</strong>. Como Proveedor de Tecnología (Tech Provider) autorizado por Meta, cumplimos con las políticas y requisitos aplicables.</p>
+
+        <div class="info-card">
+          <p class="card-label">¿Cómo fluyen los datos a través de Meta Cloud API?</p>
+          <p>Cuando un usuario final envía un mensaje a un negocio a través de WhatsApp o Instagram DM, ese mensaje es transmitido por Meta a nuestros servidores mediante la Meta Cloud API. Reservas procesa el contenido del mensaje para interpretar la intención del usuario (agendar, consultar, cancelar una cita) y genera una respuesta automatizada que se envía de vuelta al usuario a través del mismo canal.</p>
+        </div>
+
+        <p><strong>Datos que fluyen a través de Meta Cloud API:</strong></p>
+        <ul>
+          <li>Identificador de cuenta de WhatsApp o Instagram del usuario (número de teléfono o username).</li>
+          <li>Contenido textual de los mensajes enviados por el usuario al negocio.</li>
+          <li>Metadatos del mensaje: marca de tiempo, identificador del mensaje, estatus de entrega.</li>
+          <li>Respuestas automatizadas generadas por Reservas que se envían al usuario.</li>
+        </ul>
+
+        <p><strong>Compromisos con las políticas de Meta:</strong></p>
+        <ul>
+          <li>Reservas opera como Tech Provider bajo los términos de uso de la API de WhatsApp Business de Meta y las Políticas de la Plataforma de Meta.</li>
+          <li>Los datos recibidos a través de la API de Meta son utilizados únicamente para las finalidades declaradas en este aviso; no se venden ni se comparten con terceros no autorizados.</li>
+          <li>Reservas no utiliza datos de conversaciones de WhatsApp o Instagram DM para entrenar modelos de inteligencia artificial de propósito general ni para publicidad dirigida.</li>
+          <li>Los negocios que usan Reservas son responsables de haber obtenido el consentimiento de sus clientes para recibir mensajes a través de WhatsApp Business conforme a los términos de uso de Meta y a la legislación aplicable.</li>
+          <li>Reservas cumple con las políticas de retención y eliminación de datos establecidas por Meta para sus socios tecnológicos.</li>
+        </ul>
+
+        <p>Para mayor información sobre cómo Meta trata los datos en sus plataformas, puede consultar la <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Política de Privacidad de Meta</a>.</p>
+      </section>
+
+      <!-- 5. Transferencias -->
+      <section class="section" id="transferencias">
+        <p class="section-number">05</p>
+        <h2>Transferencias de datos a terceros</h2>
+        <p>Para la prestación del servicio, Reservas comparte datos personales con los siguientes subencargados de tratamiento (encargados técnicos). Estas transferencias son necesarias para el funcionamiento de la plataforma:</p>
+
+        <table class="data-table" aria-label="Transferencias de datos a terceros">
+          <thead>
+            <tr>
+              <th>Tercero</th>
+              <th>Finalidad</th>
+              <th>País / Región</th>
+              <th>Datos transferidos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Meta Platforms, Inc.</strong></td>
+              <td>Transmisión de mensajes a través de WhatsApp Business e Instagram DM mediante la Meta Cloud API</td>
+              <td>Estados Unidos</td>
+              <td>Mensajes, identificadores de cuenta, metadatos de mensajes</td>
+            </tr>
+            <tr>
+              <td><strong>Supabase, Inc.</strong></td>
+              <td>Almacenamiento de base de datos: historial de reservaciones, perfiles de clientes, configuraciones del negocio</td>
+              <td>Estados Unidos</td>
+              <td>Nombre, teléfono, correo, historial de citas, mensajes procesados</td>
+            </tr>
+            <tr>
+              <td><strong>Google LLC (Gemini API)</strong></td>
+              <td>Procesamiento de lenguaje natural: interpretación de mensajes y generación de respuestas mediante inteligencia artificial</td>
+              <td>Estados Unidos</td>
+              <td>Contenido textual de mensajes (para procesamiento en tiempo real)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Estas transferencias se realizan en términos que garantizan niveles de protección adecuados conforme al artículo 37 de la LFPDPPP y sus normas relacionadas. No realizamos transferencias de datos personales a terceros distintos a los anteriores sin su consentimiento expreso, salvo que sea requerido por autoridad competente conforme a la ley.</p>
+        <p>Los negocios que contratan Reservas (clientes B2B) tienen acceso a los datos de sus propios usuarios finales a través del panel de administración, siendo ellos también responsables del tratamiento de dichos datos en términos de la LFPDPPP.</p>
+      </section>
+
+      <!-- 6. Derechos ARCO -->
+      <section class="section" id="arco">
+        <p class="section-number">06</p>
+        <h2>Derechos ARCO</h2>
+        <p>Como titular de datos personales, usted tiene derecho a ejercer en cualquier momento los siguientes derechos frente al responsable del tratamiento:</p>
+
+        <div class="arco-grid">
+          <div class="arco-card">
+            <div class="arco-letter">A</div>
+            <h3>Acceso</h3>
+            <p>Conocer qué datos personales suyos tenemos, para qué los usamos y las condiciones del tratamiento.</p>
+          </div>
+          <div class="arco-card">
+            <div class="arco-letter">R</div>
+            <h3>Rectificación</h3>
+            <p>Solicitar la corrección de sus datos cuando sean inexactos, incompletos o estén desactualizados.</p>
+          </div>
+          <div class="arco-card">
+            <div class="arco-letter">C</div>
+            <h3>Cancelación</h3>
+            <p>Solicitar la supresión de sus datos cuando ya no sean necesarios para las finalidades del tratamiento.</p>
+          </div>
+          <div class="arco-card">
+            <div class="arco-letter">O</div>
+            <h3>Oposición</h3>
+            <p>Oponerse al tratamiento de sus datos para finalidades específicas, en particular las secundarias.</p>
+          </div>
+        </div>
+
+        <p><strong>¿Cómo ejercer sus derechos?</strong></p>
+        <p>Para ejercer cualquiera de sus derechos ARCO, envíe una solicitud al correo <a href="mailto:contacto@reservas.app">contacto@reservas.app</a> indicando:</p>
+        <ul>
+          <li>Nombre completo y datos de contacto.</li>
+          <li>El derecho ARCO que desea ejercer y los datos sobre los que recae la solicitud.</li>
+          <li>Una descripción clara de lo que solicita.</li>
+          <li>Documento que acredite su identidad (copia de identificación oficial).</li>
+        </ul>
+        <p>Daremos respuesta a su solicitud dentro de los <strong>20 días hábiles</strong> siguientes a su recepción. En casos que lo requieran, este plazo podrá ampliarse por 20 días hábiles adicionales, de lo cual se le notificará. La respuesta se hará efectiva dentro de los 15 días hábiles siguientes a la comunicación de la misma.</p>
+        <p>Si considera que su solicitud no fue atendida adecuadamente, tiene derecho a acudir ante el INAI (<a href="https://www.inai.org.mx" target="_blank" rel="noopener noreferrer">www.inai.org.mx</a>) para presentar una queja o denuncia.</p>
+      </section>
+
+      <!-- 7. Cookies -->
+      <section class="section" id="cookies">
+        <p class="section-number">07</p>
+        <h2>Uso de cookies y tecnologías de seguimiento</h2>
+        <p>El sitio web de Reservas (<strong>reservas.app</strong>) y el panel de administración pueden utilizar cookies y tecnologías similares para los siguientes fines:</p>
+        <ul>
+          <li><strong>Cookies esenciales:</strong> Necesarias para el funcionamiento del panel de administración (sesión de usuario, preferencias de idioma). No pueden desactivarse.</li>
+          <li><strong>Cookies analíticas:</strong> Nos permiten entender cómo los usuarios interactúan con el sitio (páginas visitadas, tiempo de sesión) para mejorar la experiencia. Utilizamos datos agregados y anónimos.</li>
+          <li><strong>Cookies de rendimiento:</strong> Almacenan preferencias para personalizar la experiencia del usuario dentro del panel.</li>
+        </ul>
+        <p>Puede configurar su navegador para rechazar o eliminar cookies. Tenga en cuenta que desactivar las cookies esenciales puede impedir el correcto funcionamiento del panel de administración. Las cookies de terceros que pudiera generar la integración con Meta están sujetas a las políticas de privacidad de Meta.</p>
+      </section>
+
+      <!-- 8. Cambios al aviso -->
+      <section class="section" id="cambios">
+        <p class="section-number">08</p>
+        <h2>Cambios al presente aviso de privacidad</h2>
+        <p>Reservas se reserva el derecho de realizar modificaciones o actualizaciones al presente Aviso de Privacidad en cualquier momento, para atender cambios en la legislación aplicable, en nuestras prácticas de privacidad, en los servicios ofrecidos o por cualquier otra razón que lo justifique.</p>
+        <p>Los cambios serán notificados a través de uno o más de los siguientes mecanismos:</p>
+        <ul>
+          <li>Publicación de la versión actualizada en esta misma página (<strong>reservas.app/aviso-de-privacidad.html</strong>), indicando la nueva fecha de actualización.</li>
+          <li>Notificación por correo electrónico a los negocios suscriptores activos.</li>
+          <li>Mensaje visible en el panel de administración de Reservas.</li>
+        </ul>
+        <p>Le recomendamos revisar periódicamente este aviso. El uso continuado de la plataforma después de la publicación de modificaciones constituye su aceptación de las mismas.</p>
+      </section>
+
+      <!-- 9. Contacto -->
+      <section class="section" id="contacto">
+        <p class="section-number">09</p>
+        <h2>Contacto</h2>
+        <p>Para cualquier duda, aclaración o ejercicio de derechos relacionado con el tratamiento de sus datos personales, puede comunicarse con nosotros:</p>
+        <div class="info-card highlight">
+          <p class="card-label">Datos de contacto</p>
+          <p><strong>Correo electrónico:</strong> <a href="mailto:contacto@reservas.app">contacto@reservas.app</a></p>
+          <p><strong>Responsable:</strong> Roberto Castillo Terrazas</p>
+          <p><strong>Producto:</strong> Reservas — reservas.app</p>
+        </div>
+        <p>El responsable del tratamiento atenderá su comunicación en un plazo no mayor a <strong>5 días hábiles</strong> para acusar recibo de la misma, independientemente del plazo de respuesta aplicable para solicitudes ARCO.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copy">&copy; 2026 Reservas · Roberto Castillo Terrazas · México</p>
+      <nav class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="index.html">Inicio</a>
+        <a href="aviso-de-privacidad.html" aria-current="page">Aviso de Privacidad</a>
+        <a href="mailto:contacto@reservas.app">contacto@reservas.app</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

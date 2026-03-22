@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="facebook-domain-verification" content="rzlopekghjxn8ft2vy9jq1yc44ide9" />
+  <title>Términos de Uso — Reservas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #13131a;
+      --bg-card: #1a1a24;
+      --border: #2a2a3a;
+      --purple: #7c3aed;
+      --purple-light: #9f67ff;
+      --purple-dim: rgba(124, 58, 237, 0.15);
+      --text-primary: #f0f0f8;
+      --text-secondary: #a0a0b8;
+      --text-muted: #6a6a88;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 15, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--purple);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--purple-light);
+    }
+
+    .back-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── PAGE TITLE ── */
+    .page-header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-badge {
+      display: inline-block;
+      background: var(--purple-dim);
+      color: var(--purple-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .page-meta {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* ── TABLE OF CONTENTS ── */
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+
+    .toc li {
+      counter-increment: toc-counter;
+    }
+
+    .toc a {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple);
+      min-width: 24px;
+    }
+
+    .toc a:hover {
+      color: var(--purple-light);
+    }
+
+    @media (max-width: 600px) {
+      .toc ol {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      margin-bottom: 48px;
+    }
+
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .section-number {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 24px 0 10px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      color: var(--text-secondary);
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    ul li, ol li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--purple);
+    }
+
+    ol {
+      counter-reset: ol-counter;
+    }
+
+    ol li {
+      counter-increment: ol-counter;
+    }
+
+    ol li::before {
+      content: counter(ol-counter) '.';
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--purple);
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--purple-light);
+      text-decoration: underline;
+      text-decoration-color: rgba(159, 103, 255, 0.4);
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    a:hover {
+      color: #b88fff;
+      text-decoration-color: rgba(184, 143, 255, 0.7);
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: var(--purple-dim);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-left: 3px solid var(--purple);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p {
+      color: rgba(240, 240, 248, 0.85);
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* ── PLANS TABLE ── */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 640px) {
+      .plans-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .plan-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .plan-card.featured {
+      border-color: var(--purple);
+      background: var(--purple-dim);
+    }
+
+    .plan-name {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .plan-card.featured .plan-name {
+      color: var(--purple-light);
+    }
+
+    .plan-price {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+
+    .plan-period {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 16px;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--purple-dim);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 22px;
+    }
+
+    .contact-info strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .contact-info a {
+      font-size: 15px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      background: var(--bg-secondary);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: var(--purple-light);
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">📅</div>
+        <span class="logo-text">Reservas</span>
+      </a>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 12L6 8l4-4"/>
+        </svg>
+        Volver al inicio
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="page-badge">Documento legal</div>
+      <h1 class="page-title">Términos de Uso</h1>
+      <p class="page-meta">Última actualización: 21 de marzo de 2026 &nbsp;·&nbsp; Versión 1.0</p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <nav class="toc" aria-label="Tabla de contenidos">
+      <div class="toc-title">Contenido</div>
+      <ol>
+        <li><a href="#aceptacion">Aceptación de los términos</a></li>
+        <li><a href="#descripcion">Descripción del servicio</a></li>
+        <li><a href="#registro">Registro y cuenta</a></li>
+        <li><a href="#meta-api">Uso de la API de Meta</a></li>
+        <li><a href="#planes">Planes y pagos</a></li>
+        <li><a href="#prueba">Prueba gratuita</a></li>
+        <li><a href="#uso-aceptable">Uso aceptable</a></li>
+        <li><a href="#propiedad">Propiedad intelectual</a></li>
+        <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
+        <li><a href="#suspension">Suspensión y terminación</a></li>
+        <li><a href="#modificaciones">Modificaciones</a></li>
+        <li><a href="#ley">Ley aplicable</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ol>
+    </nav>
+
+    <!-- INTRO -->
+    <div class="highlight-box">
+      <p>Por favor lee estos Términos de Uso con atención antes de utilizar la plataforma Reservas. Al acceder o usar el servicio, confirmas que has leído, entendido y aceptado estar sujeto a estos términos.</p>
+    </div>
+
+    <!-- 1. ACEPTACIÓN -->
+    <section id="aceptacion">
+      <div class="section-number">01</div>
+      <h2>Aceptación de los términos</h2>
+      <p>Estos Términos de Uso ("Términos") constituyen un acuerdo legal vinculante entre tú ("Usuario", "Cliente" o "Suscriptor") y <strong>Roberto Castillo Terrazas</strong>, titular y operador de la plataforma <strong>Reservas</strong> ("nosotros", "nos" o "la Plataforma").</p>
+      <p>Al crear una cuenta, iniciar una prueba gratuita, contratar un plan de pago o de cualquier otra forma acceder o utilizar los servicios de Reservas, manifiestas tu aceptación plena e incondicional de estos Términos, así como de nuestra Política de Privacidad, la cual se incorpora por referencia.</p>
+      <p>Si no estás de acuerdo con alguna parte de estos Términos, no debes usar la Plataforma. Si utilizas Reservas en nombre de una empresa u otra persona jurídica, declaras que tienes autoridad para vincular a dicha entidad con estos Términos.</p>
+    </section>
+
+    <!-- 2. DESCRIPCIÓN DEL SERVICIO -->
+    <section id="descripcion">
+      <div class="section-number">02</div>
+      <h2>Descripción del servicio</h2>
+      <p>Reservas es una plataforma de software como servicio (SaaS) de modalidad B2B diseñada para automatizar la gestión de reservaciones y citas a través de canales de mensajería, específicamente <strong>WhatsApp Business</strong> e <strong>Instagram Direct Messages</strong>, mediante inteligencia artificial conversacional.</p>
+      <h3>Funciones principales</h3>
+      <ul>
+        <li>Asistente de IA que atiende mensajes entrantes en WhatsApp e Instagram y gestiona el agendamiento de citas de forma automática las 24 horas del día.</li>
+        <li>Panel de administración web para visualizar, confirmar, reprogramar y cancelar reservaciones.</li>
+        <li>Envío de recordatorios y confirmaciones automáticas a los clientes finales del negocio.</li>
+        <li>Integración con calendarios y sistemas de gestión de negocio de terceros (según el plan contratado).</li>
+        <li>Reportes de ocupación, tasas de confirmación y análisis de demanda.</li>
+        <li>Soporte multiusuario para equipos y sucursales.</li>
+      </ul>
+      <h3>Sectores atendidos</h3>
+      <p>La Plataforma está orientada principalmente a negocios locales en México y América Latina, incluyendo pero no limitado a: salones de fiestas y eventos, barberías y estéticas, spas y centros de bienestar, consultorios médicos, psicólogos, nutriólogos, centros de estética, clínicas dentales y cualquier negocio que opere con citas o reservaciones.</p>
+      <h3>Naturaleza del servicio</h3>
+      <p>Reservas actúa exclusivamente como proveedor tecnológico ("Tech Provider"). No somos parte de las transacciones entre el Cliente y sus usuarios finales. El contenido de las comunicaciones, la fidelidad de la información y el cumplimiento de obligaciones frente a los clientes finales son responsabilidad exclusiva del Cliente.</p>
+    </section>
+
+    <!-- 3. REGISTRO Y CUENTA -->
+    <section id="registro">
+      <div class="section-number">03</div>
+      <h2>Registro y cuenta</h2>
+      <h3>Elegibilidad</h3>
+      <p>Para registrarte en Reservas debes ser una persona física mayor de 18 años o una persona moral legalmente constituida. Al crear una cuenta, garantizas que toda la información que proporcionas es veraz, actualizada y completa.</p>
+      <h3>Proceso de registro</h3>
+      <p>El registro requiere proporcionar, como mínimo: nombre completo o razón social, dirección de correo electrónico, número de teléfono de contacto, nombre del negocio y giro comercial. Adicionalmente, para la activación de los canales de Meta, se requerirán credenciales y permisos de tu cuenta de WhatsApp Business y/o perfil de Instagram.</p>
+      <h3>Seguridad de la cuenta</h3>
+      <ul>
+        <li>Eres responsable de mantener la confidencialidad de tus credenciales de acceso (usuario y contraseña).</li>
+        <li>Eres responsable de todas las actividades que ocurran en tu cuenta, con o sin tu autorización.</li>
+        <li>Debes notificarnos de inmediato en <a href="mailto:contacto@reservas.app">contacto@reservas.app</a> ante cualquier uso no autorizado de tu cuenta o brecha de seguridad.</li>
+        <li>No debes compartir tus credenciales con terceros no autorizados.</li>
+      </ul>
+      <h3>Información precisa</h3>
+      <p>Te comprometes a mantener tu información de perfil actualizada. El registro con información falsa, incompleta o engañosa puede resultar en la suspensión o cancelación de tu cuenta sin reembolso.</p>
+    </section>
+
+    <!-- 4. USO DE LA API DE META -->
+    <section id="meta-api">
+      <div class="section-number">04</div>
+      <h2>Uso de la API de Meta</h2>
+
+      <div class="highlight-box">
+        <p><strong>Aviso importante:</strong> Reservas opera como Tech Provider autorizado que accede a la plataforma de Meta (incluyendo WhatsApp Business Platform e Instagram Graph API) en nombre de los Clientes. El uso de estos canales está sujeto a las políticas de Meta y a las condiciones establecidas en esta sección.</p>
+      </div>
+
+      <h3>Rol de Reservas como Tech Provider</h3>
+      <p>Reservas tiene el carácter de proveedor tecnológico ("Tech Provider" o "Business Solution Provider") que accede a la API de Meta Cloud para habilitar las funciones de mensajería automatizada. Al usar la Plataforma, el Cliente autoriza a Reservas a actuar en su nombre para el envío y recepción de mensajes a través de dichos canales.</p>
+
+      <h3>Responsabilidades del Cliente frente a Meta</h3>
+      <p>El Cliente reconoce y acepta que es el responsable directo ante Meta del cumplimiento de todas las políticas aplicables, incluyendo:</p>
+      <ul>
+        <li><strong>Política de Uso de WhatsApp Business:</strong> el Cliente debe cumplir en todo momento las <a href="https://www.whatsapp.com/legal/business-policy" target="_blank" rel="noopener">WhatsApp Business Policy</a> y los <a href="https://www.whatsapp.com/legal/commerce-policy" target="_blank" rel="noopener">WhatsApp Commerce Policy</a>.</li>
+        <li><strong>Condiciones de la plataforma de Meta:</strong> el Cliente acepta los <a href="https://developers.facebook.com/terms/" target="_blank" rel="noopener">Términos de la Plataforma de Meta para Desarrolladores</a>.</li>
+        <li><strong>Política de Mensajería de Instagram:</strong> el Cliente cumplirá con las políticas de mensajería de Instagram al usar la integración con Instagram Direct.</li>
+        <li><strong>Ley de Protección de Datos:</strong> el Cliente es responsable de obtener los consentimientos necesarios de sus usuarios finales para el envío de mensajes.</li>
+      </ul>
+
+      <h3>Usos permitidos de la API de Meta</h3>
+      <p>A través de Reservas, el Cliente podrá utilizar la API de Meta únicamente para:</p>
+      <ul>
+        <li>Responder y gestionar mensajes iniciados por los usuarios finales del negocio (sesiones de mensajería entrante).</li>
+        <li>Enviar mensajes de confirmación, recordatorio y notificación de citas a usuarios que han iniciado conversación o dado su consentimiento explícito.</li>
+        <li>Usar plantillas de mensajes (Message Templates) aprobadas por Meta para notificaciones transaccionales relacionadas con reservaciones.</li>
+        <li>Gestionar el flujo conversacional automatizado de agendamiento de citas.</li>
+      </ul>
+
+      <h3>Usos prohibidos de la API de Meta</h3>
+      <p>Está estrictamente prohibido utilizar la integración con Meta para:</p>
+      <ul>
+        <li>Enviar mensajes masivos no solicitados, publicidad o spam a usuarios que no hayan iniciado la conversación o dado su consentimiento.</li>
+        <li>Enviar contenido que viole las políticas de contenido de Meta, incluyendo contenido engañoso, ofensivo, ilegal o que infrinja derechos de terceros.</li>
+        <li>Usar las credenciales de la API para fines distintos a la operación del negocio registrado.</li>
+        <li>Revender o sublicenciar el acceso a la API de Meta obtenido a través de Reservas.</li>
+        <li>Intentar eludir los límites de tarifa o controles de Meta.</li>
+        <li>Utilizar la API para actividades que violen leyes aplicables o los derechos de los usuarios finales.</li>
+      </ul>
+
+      <h3>Suspensión por Meta</h3>
+      <p>Reservas no es responsable de suspensiones, restricciones o inhabilitaciones impuestas por Meta a la cuenta de WhatsApp Business o Instagram del Cliente derivadas del incumplimiento de las políticas de Meta. El Cliente es el único responsable de mantener su cuenta en regla ante Meta.</p>
+
+      <h3>Cambios en las políticas de Meta</h3>
+      <p>Las políticas y capacidades técnicas de Meta pueden cambiar en cualquier momento. Reservas realizará esfuerzos razonables para mantener la compatibilidad, pero no garantiza la disponibilidad permanente de ninguna función específica dependiente de la plataforma de Meta.</p>
+    </section>
+
+    <!-- 5. PLANES Y PAGOS -->
+    <section id="planes">
+      <div class="section-number">05</div>
+      <h2>Planes y pagos</h2>
+
+      <h3>Planes disponibles</h3>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-name">Esencial</div>
+          <div class="plan-price">$399 <span class="plan-period">MXN/mes</span></div>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-name">Profesional</div>
+          <div class="plan-price">$599 <span class="plan-period">MXN/mes</span></div>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price" style="font-size:16px; padding-top: 4px;">A consultar</div>
+        </div>
+      </div>
+      <p>Las características específicas incluidas en cada plan se detallan en la página de precios de <a href="index.html">reservas.app</a>. Los precios están expresados en pesos mexicanos (MXN) e incluyen IVA, salvo que se indique lo contrario.</p>
+
+      <h3>Facturación y renovación automática</h3>
+      <p>Las suscripciones son de modalidad mensual y se renuevan automáticamente al término de cada ciclo de facturación. Al proporcionar un método de pago, autorizas a Reservas a cobrar el importe correspondiente al plan seleccionado de forma recurrente hasta que canceles la suscripción.</p>
+      <p>Reservas se reserva el derecho de actualizar los precios con un aviso previo de al menos <strong>30 días naturales</strong> mediante notificación al correo electrónico registrado. Si no cancelas tu suscripción antes de que entre en vigor el nuevo precio, se entenderá que aceptas el cambio.</p>
+
+      <h3>Métodos de pago</h3>
+      <p>Los métodos de pago aceptados se informan durante el proceso de contratación. Eres responsable de mantener información de pago válida y actualizada. El fallo en el procesamiento de un pago puede resultar en la suspensión del servicio.</p>
+
+      <h3>Política de cancelación y reembolsos</h3>
+      <p>Puedes cancelar tu suscripción en cualquier momento desde tu panel de administración o contactando a <a href="mailto:contacto@reservas.app">contacto@reservas.app</a>. La cancelación tendrá efecto al final del período de facturación en curso; el acceso al servicio se mantendrá activo hasta esa fecha.</p>
+      <p><strong>No se realizan reembolsos prorrateados</strong> por períodos no utilizados, salvo en los casos en que la ley mexicana lo exija o cuando Reservas determine, a su discreción, que procede un reembolso. En caso de que Reservas cancele el servicio por causas no imputables al Cliente, se analizará la procedencia de un reembolso proporcional.</p>
+
+      <h3>Plan Enterprise</h3>
+      <p>El plan Enterprise está sujeto a un contrato de servicio específico negociado entre el Cliente y Roberto Castillo Terrazas. Las condiciones económicas, niveles de servicio (SLA) y demás términos se acordarán por escrito de forma individual.</p>
+    </section>
+
+    <!-- 6. PRUEBA GRATUITA -->
+    <section id="prueba">
+      <div class="section-number">06</div>
+      <h2>Prueba gratuita</h2>
+      <p>Reservas ofrece un período de prueba gratuita de <strong>30 días naturales</strong> para que los nuevos Clientes puedan evaluar la Plataforma sin costo y <strong>sin necesidad de proporcionar datos de tarjeta de crédito</strong>.</p>
+      <h3>Condiciones de la prueba</h3>
+      <ul>
+        <li>La prueba gratuita está disponible únicamente para nuevos registros. Solo se permite una prueba por persona, empresa o número de teléfono de WhatsApp Business.</li>
+        <li>Durante la prueba, el acceso a las funciones puede estar limitado según lo determine Reservas.</li>
+        <li>El uso de la Plataforma durante la prueba está sujeto a estos Términos de Uso en su totalidad.</li>
+      </ul>
+      <h3>Al finalizar la prueba gratuita</h3>
+      <p>Al concluir el período de 30 días, el servicio se suspenderá automáticamente. Para continuar usando Reservas, el Cliente deberá contratar uno de los planes de pago disponibles. Los datos y configuraciones ingresados durante la prueba se conservarán por un período de <strong>15 días naturales</strong> adicionales, tras los cuales podrán eliminarse de forma permanente si no se ha activado un plan de pago.</p>
+      <p>Reservas se reserva el derecho de modificar, extender o suspender la oferta de prueba gratuita en cualquier momento sin previo aviso.</p>
+    </section>
+
+    <!-- 7. USO ACEPTABLE -->
+    <section id="uso-aceptable">
+      <div class="section-number">07</div>
+      <h2>Uso aceptable</h2>
+      <p>Al usar Reservas, te comprometes a utilizar la Plataforma únicamente para fines legítimos relacionados con la gestión de reservaciones y citas de tu negocio. Específicamente, está prohibido:</p>
+      <h3>Conductas prohibidas</h3>
+      <ul>
+        <li>Usar la Plataforma para enviar comunicaciones no solicitadas, spam o mensajes masivos a personas que no hayan dado su consentimiento.</li>
+        <li>Transmitir, almacenar o procesar contenido ilegal, difamatorio, obsceno, fraudulento, amenazante o que viole derechos de terceros.</li>
+        <li>Intentar acceder sin autorización a sistemas, cuentas o datos de otros usuarios de la Plataforma.</li>
+        <li>Realizar ingeniería inversa, descompilar, desensamblar o intentar derivar el código fuente de la Plataforma.</li>
+        <li>Usar robots, scrapers, crawlers u otras herramientas automatizadas para acceder o recopilar datos de la Plataforma sin autorización expresa.</li>
+        <li>Suplantar la identidad de cualquier persona o entidad, o declarar falsamente una afiliación con una persona o entidad.</li>
+        <li>Interferir o interrumpir la integridad, el rendimiento o la disponibilidad de la Plataforma.</li>
+        <li>Usar la Plataforma para actividades que violen la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) u otras leyes de privacidad aplicables.</li>
+        <li>Revender, sublicenciar, arrendar o de cualquier otra forma transferir el acceso a la Plataforma a terceros sin autorización escrita de Reservas.</li>
+        <li>Usar la Plataforma para actividades que promuevan violencia, discriminación, actividades ilegales o cualquier causa que dañe a personas.</li>
+      </ul>
+      <h3>Consecuencias</h3>
+      <p>El incumplimiento de estas normas puede resultar en la suspensión o cancelación inmediata de tu cuenta, sin perjuicio de las acciones legales que correspondan.</p>
+    </section>
+
+    <!-- 8. PROPIEDAD INTELECTUAL -->
+    <section id="propiedad">
+      <div class="section-number">08</div>
+      <h2>Propiedad intelectual</h2>
+      <h3>Titularidad de Reservas</h3>
+      <p>La Plataforma Reservas, incluyendo su software, código fuente, algoritmos, diseños, interfaces de usuario, logotipos, marcas, textos, gráficos, y todo el contenido e infraestructura asociados, son propiedad exclusiva de <strong>Roberto Castillo Terrazas</strong> y están protegidos por las leyes mexicanas e internacionales de propiedad intelectual, derechos de autor y marcas registradas.</p>
+      <h3>Licencia de uso</h3>
+      <p>Al contratar un plan o iniciar una prueba gratuita, Reservas te otorga una licencia limitada, no exclusiva, no transferible, revocable y temporal para usar la Plataforma únicamente para los fines comerciales propios de tu negocio y de conformidad con estos Términos.</p>
+      <p>Esta licencia no te concede ningún derecho de propiedad sobre la Plataforma ni te autoriza a copiar, modificar, distribuir, vender o crear obras derivadas del software de Reservas.</p>
+      <h3>Contenido del Cliente</h3>
+      <p>Tú conservas la titularidad de todos los datos, información y contenidos que ingreses a la Plataforma ("Contenido del Cliente"). Al usar Reservas, nos otorgas una licencia limitada para procesar y usar tu Contenido del Cliente exclusivamente para prestar el servicio contratado. No compartiremos tu Contenido del Cliente con terceros salvo en los casos descritos en nuestra Política de Privacidad o cuando la ley lo requiera.</p>
+      <h3>Retroalimentación</h3>
+      <p>Si nos proporcionas sugerencias, ideas o comentarios sobre la Plataforma ("Retroalimentación"), nos otorgas el derecho irrevocable, libre de regalías, a usar dicha Retroalimentación para mejorar el servicio sin obligación de compensarte.</p>
+    </section>
+
+    <!-- 9. LIMITACIÓN DE RESPONSABILIDAD -->
+    <section id="responsabilidad">
+      <div class="section-number">09</div>
+      <h2>Limitación de responsabilidad</h2>
+      <h3>Servicio "tal como está"</h3>
+      <p>La Plataforma se proporciona "tal como está" y "según disponibilidad", sin garantías de ningún tipo, expresas o implícitas, en la máxima medida permitida por la ley aplicable. Reservas no garantiza que el servicio sea ininterrumpido, libre de errores, completamente seguro ni que cumpla todos tus requisitos específicos.</p>
+      <h3>Exclusión de daños</h3>
+      <p>En ningún caso Roberto Castillo Terrazas, ni sus colaboradores, serán responsables por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo pérdida de beneficios, pérdida de datos, interrupción del negocio, daño reputacional o cualquier otro daño intangible, derivados del uso o la imposibilidad de usar la Plataforma, incluso si se ha advertido de la posibilidad de tales daños.</p>
+      <h3>Límite máximo de responsabilidad</h3>
+      <p>La responsabilidad total de Reservas frente al Cliente por cualquier reclamación derivada de estos Términos o del uso de la Plataforma no excederá el monto total pagado por el Cliente a Reservas durante los <strong>tres (3) meses</strong> inmediatamente anteriores al evento que dio origen a la reclamación.</p>
+      <h3>Servicios de terceros</h3>
+      <p>Reservas no es responsable de la disponibilidad, el rendimiento ni los cambios en las políticas o condiciones de servicios de terceros, incluyendo las APIs de Meta (WhatsApp Business, Instagram), servicios de nube o cualquier integración de terceros utilizada por la Plataforma.</p>
+      <h3>Indemnización</h3>
+      <p>El Cliente se compromete a indemnizar, defender y mantener indemne a Roberto Castillo Terrazas y sus colaboradores frente a cualquier reclamación, daño, pérdida, costo o gasto (incluyendo honorarios legales razonables) derivados del incumplimiento de estos Términos, el uso indebido de la Plataforma o la violación de derechos de terceros.</p>
+    </section>
+
+    <!-- 10. SUSPENSIÓN Y TERMINACIÓN -->
+    <section id="suspension">
+      <div class="section-number">10</div>
+      <h2>Suspensión y terminación</h2>
+      <h3>Suspensión por incumplimiento</h3>
+      <p>Reservas se reserva el derecho de suspender o restringir el acceso a la Plataforma de forma inmediata y sin previo aviso en los siguientes casos:</p>
+      <ul>
+        <li>Incumplimiento de cualquier disposición de estos Términos.</li>
+        <li>Violación de las políticas de Meta o recepción de notificación de Meta sobre uso inapropiado de sus APIs por parte del Cliente.</li>
+        <li>Falta de pago por dos o más ciclos de facturación consecutivos.</li>
+        <li>Uso de la Plataforma para actividades ilegales, fraudulentas o dañinas.</li>
+        <li>Proporcionar información falsa en el registro.</li>
+        <li>Riesgo de seguridad que afecte a otros usuarios o a la infraestructura de la Plataforma.</li>
+      </ul>
+      <h3>Suspensión preventiva</h3>
+      <p>En casos donde se detecte un posible incumplimiento que requiera investigación, Reservas podrá suspender preventivamente la cuenta notificando al Cliente por correo electrónico. Realizaremos esfuerzos razonables para resolver la situación en el menor tiempo posible.</p>
+      <h3>Terminación por el Cliente</h3>
+      <p>El Cliente puede dar por terminada su relación con Reservas en cualquier momento cancelando su suscripción. La terminación no dará derecho a reembolso de períodos ya pagados.</p>
+      <h3>Efectos de la terminación</h3>
+      <p>Tras la terminación de la cuenta, el acceso a la Plataforma cesará inmediatamente. Los datos del Cliente serán conservados por un período de <strong>30 días naturales</strong> para facilitar una eventual reactivación o exportación de datos, tras los cuales serán eliminados de forma segura conforme a nuestra Política de Privacidad.</p>
+    </section>
+
+    <!-- 11. MODIFICACIONES -->
+    <section id="modificaciones">
+      <div class="section-number">11</div>
+      <h2>Modificaciones</h2>
+      <h3>Cambios en los Términos</h3>
+      <p>Reservas se reserva el derecho de modificar estos Términos en cualquier momento. Cuando realicemos cambios materiales, lo notificaremos de la siguiente manera:</p>
+      <ul>
+        <li>Mediante un correo electrónico a la dirección registrada en tu cuenta, con al menos <strong>15 días naturales</strong> de anticipación a la entrada en vigor de los cambios.</li>
+        <li>Mediante un aviso destacado en el panel de administración de la Plataforma.</li>
+        <li>Actualizando la fecha de "Última actualización" en la parte superior de este documento.</li>
+      </ul>
+      <p>Si continúas usando la Plataforma después de que los cambios entren en vigor, se entenderá que has aceptado los nuevos Términos. Si no estás de acuerdo con los cambios, debes cancelar tu suscripción antes de la fecha de vigencia.</p>
+      <h3>Cambios en el servicio</h3>
+      <p>Reservas puede modificar, ampliar o descontinuar funciones de la Plataforma en cualquier momento. Realizaremos esfuerzos razonables para notificar cambios significativos con anticipación, pero no garantizamos la disponibilidad permanente de ninguna función en particular.</p>
+    </section>
+
+    <!-- 12. LEY APLICABLE -->
+    <section id="ley">
+      <div class="section-number">12</div>
+      <h2>Ley aplicable</h2>
+      <p>Estos Términos se rigen e interpretan de conformidad con las leyes de los <strong>Estados Unidos Mexicanos</strong>, sin dar efecto a ningún principio de conflicto de leyes.</p>
+      <p>Para la resolución de cualquier controversia, reclamación o disputa derivada de o relacionada con estos Términos o con el uso de la Plataforma, las partes se someten expresamente a la jurisdicción de los <strong>tribunales competentes de la Ciudad de México, México</strong>, renunciando a cualquier otro fuero que pudiera corresponderles por razón de sus domicilios presentes o futuros.</p>
+      <p>Lo anterior sin perjuicio del derecho del Cliente de presentar reclamaciones ante la Procuraduría Federal del Consumidor (PROFECO) cuando así corresponda conforme a la Ley Federal de Protección al Consumidor.</p>
+    </section>
+
+    <!-- 13. CONTACTO -->
+    <section id="contacto">
+      <div class="section-number">13</div>
+      <h2>Contacto</h2>
+      <p>Si tienes preguntas, comentarios o reclamaciones relacionadas con estos Términos de Uso o con el funcionamiento de la Plataforma, puedes comunicarte con nosotros:</p>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <strong>Correo electrónico</strong>
+          <a href="mailto:contacto@reservas.app">contacto@reservas.app</a>
+        </div>
+      </div>
+      <p style="margin-top: 20px;">Titular: <strong>Roberto Castillo Terrazas</strong><br />
+      Plataforma: <strong>Reservas</strong> — <a href="index.html">reservas.app</a></p>
+      <p>Nos comprometemos a responder tu comunicación en un plazo máximo de <strong>5 días hábiles</strong>.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <p style="color: var(--text-muted); font-size: 14px; text-align: center;">
+      Al usar Reservas, confirmas haber leído y aceptado estos Términos de Uso.<br />
+      Versión 1.0 &nbsp;·&nbsp; Última actualización: 21 de marzo de 2026
+    </p>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="terminos-de-uso.html">Términos de Uso</a>
+      <a href="mailto:contacto@reservas.app">contacto@reservas.app</a>
+    </div>
+    <p>&copy; 2026 Roberto Castillo Terrazas &mdash; Reservas. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
